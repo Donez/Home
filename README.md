@@ -1,13 +1,14 @@
 # GGJ 2019 Kajaani
 
 ### How to open command line
-1. Go to Desktop
+1. Go to Folder where you want the project
 2. Right click -> Git Bash Here
 
 ### How to clone
 ```
 git lfs clone https://github.com/Donez/Home.git
 ```
+After this you need to open command line in the project folder
 
 ### How to get update
 ```
