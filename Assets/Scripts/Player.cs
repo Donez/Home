@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
@@ -8,30 +10,62 @@ namespace Assets.Scripts
         public float BaseSpeed = 5.0f;
         public float BaseJump = 200.0f;
         public float GroundedDistance = 0.55f;
+        public float MaxChargedJump = 1.5f;
+        public float JumpChargeSpeed = 1.0f;
+        public float JumpChargeNow = 1.0f;
 
         private Transform m_transform;
         private Vector2 m_direction;
         private Rigidbody2D m_rigidbody;
+        private bool m_jump;
+        private bool m_chargingJump;
+        private float m_horizontalInput;
 
         void Awake()
         {
             m_transform = GetComponent<Transform>();
             m_direction = Vector2.zero;
             m_rigidbody = GetComponent<Rigidbody2D>();
+            m_jump = false;
+        }
+
+        void Update()
+        {
+            var oldChargingValue = m_chargingJump;
+            m_chargingJump = Input.GetButton("ChargeJump");
+
+            if ((oldChargingValue && !m_chargingJump) || Input.GetButtonDown("Jump"))
+            {
+                m_jump = true;
+            }
+
+            m_horizontalInput = Input.GetAxisRaw("Horizontal");
         }
 
         void FixedUpdate()
         {
-            if (Input.GetButtonDown("Jump") && IsGrounded())
+            if (m_jump)
             {
-                m_rigidbody.AddForce(new Vector2(0, BaseJump));
+                if (IsGrounded())
+                    m_rigidbody.AddForce(new Vector2(0, BaseJump * JumpChargeNow));
+
+                // reset jump charge
+                JumpChargeNow = 1.0f;
+                m_jump = false;
+            }
+            else if (m_chargingJump)
+            {
+                if (IsGrounded())
+                {
+                    // increment jump charge but never exceed MaxChargedJump value
+                    JumpChargeNow = Mathf.Min(MaxChargedJump, JumpChargeNow + Time.deltaTime * JumpChargeSpeed);
+                }
             }
 
-            m_direction.x = Input.GetAxisRaw("Horizontal") * BaseSpeed * Time.deltaTime;
+            m_direction.x = m_horizontalInput * BaseSpeed * Time.deltaTime;
 
             m_transform.Translate(m_direction, Space.World);
         }
-
 
         private bool IsGrounded()
         {
