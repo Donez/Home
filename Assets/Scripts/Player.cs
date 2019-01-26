@@ -32,9 +32,9 @@ namespace Assets.Scripts
         void Update()
         {
             var oldChargingValue = m_chargingJump;
-            m_chargingJump = Input.GetButton("Jump");
+            m_chargingJump = Input.GetButton("ChargeJump");
 
-            if (oldChargingValue && !m_chargingJump)
+            if ((oldChargingValue && !m_chargingJump) || Input.GetButtonDown("Jump"))
             {
                 m_jump = true;
             }
