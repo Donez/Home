@@ -1,15 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class ExampleStoryText : MonoBehaviour
+    public class StoryPart_One : MonoBehaviour
     {
-        // Start is called before the first frame update
         void Start()
         {
             StoryTeller.DisplayText(
                 new StoryText(
-                    text: "Hello..", 
+                    text: "Hello..",
                     stopTime: true));
 
             StoryTeller.DisplayText(
