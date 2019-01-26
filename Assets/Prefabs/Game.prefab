@@ -568,7 +568,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 0bc21c9493471574d9ee74993c5680e8, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
@@ -1630,66 +1630,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: loadMainButton
-      value: 
-      objectReference: {fileID: 2056077256}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: loadMainImage
-      value: 
-      objectReference: {fileID: 2056077255}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: loadMainText
-      value: 
-      objectReference: {fileID: 270646243}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: loadLevel1Button
-      value: 
-      objectReference: {fileID: 166377427}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: loadLevel1Image
-      value: 
-      objectReference: {fileID: 166377426}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: loadLevel1Text
-      value: 
-      objectReference: {fileID: 2082586311}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: loadLevel2Button
-      value: 
-      objectReference: {fileID: 666349589}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: loadLevel2Image
-      value: 
-      objectReference: {fileID: 666349588}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: loadLevel2Text
-      value: 
-      objectReference: {fileID: 316012346}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: loadLevel3Button
-      value: 
-      objectReference: {fileID: 7194634}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: loadLevel3Image
-      value: 
-      objectReference: {fileID: 7194632}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: loadLevel3Text
-      value: 
-      objectReference: {fileID: 115620799}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a50fef75a742db64da1eef65c62da6dd, type: 3}
 --- !u!4 &1663685883352623112 stripped
