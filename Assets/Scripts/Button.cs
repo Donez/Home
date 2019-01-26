@@ -14,29 +14,17 @@ public class Button : MonoBehaviour
 
     public GameObject door;
 
-    private float triggerMass;
-    private Rigidbody2D triggerRb;
+    public List<Rigidbody2D> weights = new List<Rigidbody2D>();
 
     public bool holdButton = false;
 
-    private GameObject triggerObj;
-
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(triggerObj);
-    }
-
     void OnTriggerEnter2D(Collider2D other)
     {
-        
-        triggerRb = other.gameObject.GetComponent<Rigidbody2D>();
+        var newWeight = other.GetComponent<Rigidbody2D>();
+        weights.Add(newWeight);
 
-        triggerMass = triggerRb.mass;
-
-        if (triggerMass >= requiredMass)
+        if (GetWeightsTotalMass() >= requiredMass)
         {
-            triggerObj = other.gameObject;
             gameObject.GetComponent<SpriteRenderer>().sprite = activatedButton;
             OpenDoor();
         }
@@ -44,7 +32,10 @@ public class Button : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject == triggerObj)
+        var removedWeight = col.GetComponent<Rigidbody2D>();
+        weights.Remove(removedWeight);
+
+        if (GetWeightsTotalMass() < requiredMass)
         {
             if (holdButton == true)
             {
@@ -53,8 +44,17 @@ public class Button : MonoBehaviour
                 CloseDoor();
             }
         }
+    }
 
+    private float GetWeightsTotalMass()
+    {
+        float totalMass = 0.0f;
+        foreach (var weight in weights)
+        {
+            totalMass += weight.mass;
+        }
 
+        return totalMass;
     }
 
     public void OpenDoor()
