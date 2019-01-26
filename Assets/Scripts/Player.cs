@@ -47,6 +47,9 @@ namespace Assets.Scripts
             if (Game.WorkingOnPuzzle)
                 return;
 
+            if (Game.IsPlayingCutscene)
+                return;
+
             if (m_jump)
             {
                 if (IsGrounded())
