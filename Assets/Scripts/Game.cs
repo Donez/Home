@@ -4,6 +4,20 @@ namespace Assets.Scripts
 {
     public class Game : MonoBehaviour
     {
+        private static Game Instance;
+
+        private void Awake()
+        {
+            if (Instance != null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+
         public static bool WorkingOnPuzzle = false;
 
         public static bool IsPlayingCutscene

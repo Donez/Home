@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
 {
@@ -30,6 +31,24 @@ namespace Assets.Scripts
             m_rigidbody = GetComponent<Rigidbody2D>();
             m_spriteRenderer = GetComponent<SpriteRenderer>();
             m_jump = false;
+
+            SceneManager.activeSceneChanged += (Scene old, Scene newScene) =>
+            {
+                ResetPosition();
+            };
+        }
+
+        public void ResetPosition()
+        {
+            var spawn = GameObject.FindGameObjectWithTag("PlayerSpawn");
+
+            if (spawn == null)
+            {
+                Debug.LogError("Couldn't find player spawn");
+                return;
+            }
+
+            transform.position = spawn.transform.position;
         }
 
         void Update()

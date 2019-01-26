@@ -18,7 +18,6 @@ namespace Assets.Scripts
                 return;
             }
 
-            DontDestroyOnLoad(gameObject);
             Instance = this;
 
             m_queuedTexts = new Queue<StoryText>();

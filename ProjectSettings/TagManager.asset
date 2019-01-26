@@ -9,6 +9,7 @@ TagManager:
   - Branch
   - Clingy
   - DragAwayFrom
+  - PlayerSpawn
   layers:
   - Default
   - TransparentFX
