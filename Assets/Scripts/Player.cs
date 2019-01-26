@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
@@ -42,16 +44,16 @@ namespace Assets.Scripts
 
         void FixedUpdate()
         {
-            if(m_jump)
+            if (m_jump)
             {
-                if(IsGrounded())
+                if (IsGrounded())
                     m_rigidbody.AddForce(new Vector2(0, BaseJump * JumpChargeNow));
 
                 // reset jump charge
                 JumpChargeNow = 1.0f;
                 m_jump = false;
             }
-            else if(m_chargingJump)
+            else if (m_chargingJump)
             {
                 if (IsGrounded())
                 {
