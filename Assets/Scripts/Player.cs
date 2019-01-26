@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts
 {
-    [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
+    [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D), typeof(SpriteRenderer))]
     public class Player : MonoBehaviour
     {
         public float BaseSpeed = 5.0f;
@@ -20,12 +21,14 @@ namespace Assets.Scripts
         private bool m_jump;
         private bool m_chargingJump;
         private float m_horizontalInput;
+        private SpriteRenderer m_spriteRenderer;
 
         void Awake()
         {
             m_transform = GetComponent<Transform>();
             m_direction = Vector2.zero;
             m_rigidbody = GetComponent<Rigidbody2D>();
+            m_spriteRenderer = GetComponent<SpriteRenderer>();
             m_jump = false;
         }
 
@@ -69,6 +72,11 @@ namespace Assets.Scripts
             }
 
             m_direction.x = m_horizontalInput * BaseSpeed * Time.deltaTime;
+
+            if (Math.Abs(m_direction.x) > 0.0f)
+            {
+                m_spriteRenderer.flipX = m_direction.x < 0;
+            }
 
             m_transform.Translate(m_direction, Space.World);
         }
