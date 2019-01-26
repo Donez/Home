@@ -15,7 +15,7 @@ namespace Assets.Scripts
 
             StoryTeller.DisplayText(
                 new StoryText(
-                    text: "I found everything",
+                    text: "I've found everything",
                     stopTime: true,
                     preDelaySeconds: 0.5f));
 
@@ -27,7 +27,7 @@ namespace Assets.Scripts
 
             StoryTeller.DisplayText(
                 new StoryText(
-                    text: "Because home is where my loved ones are",
+                    text: "Home is friends and loved ones",
                     stopTime: true,
                     preDelaySeconds: 1.0f));
         }

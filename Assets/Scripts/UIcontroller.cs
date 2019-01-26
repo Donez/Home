@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class UIcontroller : MonoBehaviour
 {
-    public int currentLevel;
-
     public UnityEngine.UI.Button ContinueButton;
     public Image ContinueImage;
     public Text ContinueText;
@@ -87,5 +85,17 @@ public class UIcontroller : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         Debug.Log("Load main menu");
+
+        ContinueButton.enabled = false;
+        ContinueImage.enabled = false;
+        ContinueText.enabled = false;
+
+        ResetButton.enabled = false;
+        ResetImage.enabled = false;
+        ResetText.enabled = false;
+
+        ReturnMenuButton.enabled = false;
+        ReturnMenuImage.enabled = false;
+        ReturnMenuText.enabled = false;
     }
 }

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3515745265996351809}
   - component: {fileID: 3783110671194916450}
   - component: {fileID: 1137338091604240543}
-  m_Layer: 10
-  m_Name: Vine_1
+  m_Layer: 12
+  m_Name: Wire_1
   m_TagString: Vine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2886687852732119022}
   m_LocalRotation: {x: 0, y: 0, z: -0.055194125, w: 0.9984757}
   m_LocalPosition: {x: 0.6, y: 2.47, z: 0.076171875}
-  m_LocalScale: {x: 5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -67,11 +67,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: cc78ce87e861883478b3abc2271c2093, type: 3}
-  m_Color: {r: 0, g: 0.21698111, b: 0.015502886, a: 1}
+  m_SortingLayerID: 630485077
+  m_SortingLayer: 4
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 194f0bf8926a44e41913feaad9709bd1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,14 +98,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 6.67, y: 1.27}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 6.1, y: 0.93}
   m_EdgeRadius: 0
 --- !u!114 &1137338091604240543
 MonoBehaviour:
