@@ -18,7 +18,10 @@ namespace Assets.Scripts
         {
             if (!m_puzzleInstance)
             {
-                m_puzzleInstance = GameObject.Instantiate(PuzzlePrefab, Vector3.zero, PuzzlePrefab.transform.rotation);
+                var position =  Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f, Screen.height / 2.0f));
+                position.z = 0;
+
+                m_puzzleInstance = GameObject.Instantiate(PuzzlePrefab, position, PuzzlePrefab.transform.rotation);
                 m_puzzleInstance.OnPuzzleCompleted += OnPuzzleCompleted;
 
                 Game.WorkingOnPuzzle = true;

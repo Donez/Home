@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 628467457133464677}
   - component: {fileID: 1192380124640126548}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ClingyPuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,6 +59,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ClingyCreature (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279074302946605630, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6802481794600452491, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
         type: 3}
@@ -115,6 +120,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7106994992475647756, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 630485077
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106994992475647756, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58bc14ff47cea2e43bf4c93ebb1007c7, type: 3}
 --- !u!4 &5977342908894668068 stripped
@@ -134,6 +149,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ClingPuzzleObject_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165384921411414757, guid: 31cdbe3d290e5f946bca2aad7cb4a337,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5204173985640854957, guid: 31cdbe3d290e5f946bca2aad7cb4a337,
         type: 3}
@@ -190,6 +210,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 660749368175140366, guid: 31cdbe3d290e5f946bca2aad7cb4a337,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 630485077
+      objectReference: {fileID: 0}
+    - target: {fileID: 660749368175140366, guid: 31cdbe3d290e5f946bca2aad7cb4a337,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31cdbe3d290e5f946bca2aad7cb4a337, type: 3}
 --- !u!4 &7782883018449226549 stripped
@@ -209,6 +239,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ClingyCreature (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279074302946605630, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6802481794600452491, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
         type: 3}
@@ -265,6 +300,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7106994992475647756, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 630485077
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106994992475647756, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58bc14ff47cea2e43bf4c93ebb1007c7, type: 3}
 --- !u!4 &1854117224980510343 stripped
@@ -284,6 +329,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ClingyCreature
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279074302946605630, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6802481794600452491, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
         type: 3}
@@ -340,6 +390,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7106994992475647756, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 630485077
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106994992475647756, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58bc14ff47cea2e43bf4c93ebb1007c7, type: 3}
 --- !u!4 &1843801673275961514 stripped
@@ -359,6 +419,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ClingyCreature (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279074302946605630, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6802481794600452491, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
         type: 3}
@@ -414,6 +479,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106994992475647756, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 630485077
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106994992475647756, guid: 58bc14ff47cea2e43bf4c93ebb1007c7,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58bc14ff47cea2e43bf4c93ebb1007c7, type: 3}

@@ -8,6 +8,7 @@ TagManager:
   - Vine
   - Branch
   - Clingy
+  - DragAwayFrom
   layers:
   - Default
   - TransparentFX
@@ -53,4 +54,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3817206193
+    locked: 0
+  - name: Puzzle
+    uniqueID: 630485077
     locked: 0
