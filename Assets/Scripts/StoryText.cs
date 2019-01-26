@@ -1,5 +1,8 @@
-﻿namespace Assets.Scripts
+﻿using System;
+
+namespace Assets.Scripts
 {
+    [Serializable]
     public struct StoryText
     {
         public StoryText(string text, bool stopTime, float preDelaySeconds = 0.0f)
@@ -9,8 +12,8 @@
             PreDelaySecondsSeconds = preDelaySeconds;
         }
 
-        public readonly float PreDelaySecondsSeconds;
-        public readonly bool StopTime;
-        public readonly string Text;
+        public float PreDelaySecondsSeconds;
+        public bool StopTime;
+        public string Text;
     }
 }

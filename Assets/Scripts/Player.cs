@@ -33,11 +33,6 @@ namespace Assets.Scripts
             m_spriteRenderer = GetComponent<SpriteRenderer>();
             m_animator = GetComponent<Animator>();
             m_jump = false;
-
-            SceneManager.activeSceneChanged += (Scene old, Scene newScene) =>
-            {
-                ResetPosition();
-            };
         }
 
         public void ResetPosition()

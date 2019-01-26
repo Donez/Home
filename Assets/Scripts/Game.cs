@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
 {
     public class Game : MonoBehaviour
     {
         private static Game Instance;
+        private GameObject m_player;
 
         private void Awake()
         {
@@ -16,6 +18,20 @@ namespace Assets.Scripts
 
             DontDestroyOnLoad(gameObject);
             Instance = this;
+
+            m_player = GameObject.FindGameObjectWithTag("Player");
+
+            SceneManager.activeSceneChanged += (Scene old, Scene newScene) =>
+            {
+                bool isMainMenu = newScene.name == "MainMenu";
+
+                m_player.gameObject.SetActive(!isMainMenu);
+
+                if (!isMainMenu)
+                {
+                    m_player.GetComponent<Player>().ResetPosition();
+                }
+            };
         }
 
         public static bool WorkingOnPuzzle = false;
