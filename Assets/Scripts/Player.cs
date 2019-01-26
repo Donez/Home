@@ -23,6 +23,7 @@ namespace Assets.Scripts
         private bool m_chargingJump;
         private float m_horizontalInput;
         private SpriteRenderer m_spriteRenderer;
+        private Animator m_animator;
 
         void Awake()
         {
@@ -30,6 +31,7 @@ namespace Assets.Scripts
             m_direction = Vector2.zero;
             m_rigidbody = GetComponent<Rigidbody2D>();
             m_spriteRenderer = GetComponent<SpriteRenderer>();
+            m_animator = GetComponent<Animator>();
             m_jump = false;
 
             SceneManager.activeSceneChanged += (Scene old, Scene newScene) =>
@@ -56,12 +58,22 @@ namespace Assets.Scripts
             var oldChargingValue = m_chargingJump;
             m_chargingJump = Input.GetButton("ChargeJump");
 
-            if ((oldChargingValue && !m_chargingJump) || Input.GetButtonDown("Jump"))
+            if ((oldChargingValue && !m_chargingJump) || Input.GetButtonDown("Jump") && !m_chargingJump)
             {
                 m_jump = true;
             }
 
             m_horizontalInput = Input.GetAxisRaw("Horizontal");
+
+            bool grounded = IsGrounded();
+            m_animator.SetBool("IsGrounded", grounded);
+            m_animator.SetFloat("Velocity", Mathf.Abs(m_horizontalInput));
+            m_animator.SetBool("ChargingJump", m_chargingJump && grounded);
+
+            if (m_chargingJump && grounded)
+            {
+                m_horizontalInput = 0;
+            }
         }
 
         void FixedUpdate()

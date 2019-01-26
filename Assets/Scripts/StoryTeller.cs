@@ -27,7 +27,7 @@ namespace Assets.Scripts
 
         public static void DisplayText(StoryText text)
         {
-            Instance.Display(text);
+            Instance?.Display(text);
         }
 
         private void Display(StoryText text)
