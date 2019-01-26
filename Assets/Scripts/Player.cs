@@ -47,7 +47,7 @@ namespace Assets.Scripts
             if (Game.WorkingOnPuzzle)
                 return;
 
-            if (Game.IsPlayingCutscene)
+            if (!Physics.autoSimulation)
                 return;
 
             if (m_jump)
