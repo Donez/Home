@@ -19,9 +19,9 @@ namespace Assets.Scripts
 
         public void CheckPuzzle()
         {
-            foreach(var vine in ClingyCreatures)
+            foreach(var clingyCreature in ClingyCreatures)
             {
-                var collider = vine.GetComponent<Collider2D>();
+                var collider = clingyCreature.GetComponent<Collider2D>();
 
                 var collision = Physics2D.OverlapBox(
                     collider.transform.position,

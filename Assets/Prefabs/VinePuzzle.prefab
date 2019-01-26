@@ -1,5 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!61 &5049448007488670361
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820568429532348464}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4209348658192620377
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4209348658192620376}
   - component: {fileID: 4209348658192620379}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: VinePuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,32 +73,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f28fe16e304624a85d279ded813140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &5049448007488670361
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820568429532348464}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1001 &4209348657332947826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87,8 +87,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2886687852732119022, guid: 358172c729b473d42a3a85a9da3230dc,
         type: 3}
-      propertyPath: m_TagString
-      value: Vine
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1616184626668832157, guid: 358172c729b473d42a3a85a9da3230dc,
         type: 3}
@@ -145,16 +145,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -6.328
       objectReference: {fileID: 0}
-    - target: {fileID: 1616184626668832157, guid: 358172c729b473d42a3a85a9da3230dc,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3515745265996351809, guid: 358172c729b473d42a3a85a9da3230dc,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 358172c729b473d42a3a85a9da3230dc, type: 3}
 --- !u!4 &3172587027414781679 stripped
@@ -177,8 +167,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2886687852732119022, guid: 358172c729b473d42a3a85a9da3230dc,
         type: 3}
-      propertyPath: m_TagString
-      value: Vine
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1616184626668832157, guid: 358172c729b473d42a3a85a9da3230dc,
         type: 3}
@@ -235,16 +225,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -6.328
       objectReference: {fileID: 0}
-    - target: {fileID: 1616184626668832157, guid: 358172c729b473d42a3a85a9da3230dc,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3515745265996351809, guid: 358172c729b473d42a3a85a9da3230dc,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 358172c729b473d42a3a85a9da3230dc, type: 3}
 --- !u!4 &3172587027350611258 stripped
@@ -264,6 +244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Vine_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886687852732119022, guid: 358172c729b473d42a3a85a9da3230dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1616184626668832157, guid: 358172c729b473d42a3a85a9da3230dc,
         type: 3}
@@ -400,8 +385,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1862364114352910355, guid: 714a11b14f65ebb439aaafd53d665fe3, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 714a11b14f65ebb439aaafd53d665fe3, type: 3}
 --- !u!1 &820568429532348464 stripped
 GameObject:
