@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class VinePuzzle : MonoBehaviour
+    public class VinePuzzle : Puzzle
     {
         private List<Draggable> Vines;
 
@@ -26,7 +26,7 @@ namespace Assets.Scripts
                 var collision = Physics2D.OverlapBox(
                     collider.transform.position, 
                     collider.bounds.extents, 0,
-                    1 << LayerMask.NameToLayer("Branch"));
+                    1 << LayerMask.NameToLayer("DragAwayFrom"));
 
                 if (collision)
                 {
@@ -35,12 +35,8 @@ namespace Assets.Scripts
                 } 
             }
 
-            OnPuzzleCompleted();
-        }
-
-        private void OnPuzzleCompleted()
-        {
-            Debug.Log("Vine puzzle completed");
+            Debug.Log($"Vine puzzle completed");
+            OnPuzzleComplete();
         }
     }
 }
