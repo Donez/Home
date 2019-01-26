@@ -4,38 +4,38 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class VinePuzzle : Puzzle
+    public class ClingPuzzle : Puzzle
     {
-        private List<Draggable> Vines;
+        private List<Draggable> ClingyCreatures;
 
         void Awake()
         {
-            Vines = GameObject.FindGameObjectsWithTag("Vine")
+            ClingyCreatures = GameObject.FindGameObjectsWithTag("Clingy")
                 .Select(g => g.GetComponent<Draggable>())
                 .ToList();
 
-            Vines.ForEach(v => v.OnDragEnd += CheckPuzzle);
+            ClingyCreatures.ForEach(v => v.OnDragEnd += CheckPuzzle);
         }
 
         public void CheckPuzzle()
         {
-            foreach (var vine in Vines)
+            foreach(var vine in ClingyCreatures)
             {
                 var collider = vine.GetComponent<Collider2D>();
 
                 var collision = Physics2D.OverlapBox(
-                    collider.transform.position, 
+                    collider.transform.position,
                     collider.bounds.extents, 0,
                     1 << LayerMask.NameToLayer("DragAwayFrom"));
 
-                if (collision)
+                if(collision)
                 {
-                    Debug.Log($"Vine is still colliding with {collision.name}");
+                    Debug.Log($"Clingy creature is still clinging to {collision.name}");
                     return;
-                } 
+                }
             }
 
-            Debug.Log($"Vine puzzle completed");
+            Debug.Log($"Clingy puzzle completed");
             OnPuzzleComplete();
         }
     }
