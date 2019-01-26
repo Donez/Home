@@ -23,6 +23,7 @@ namespace Assets.Scripts
             Game.IsPlayingCutscene = true;
 
             var newCutscene = GameObject.Instantiate(cutscene, Vector3.zero, Quaternion.identity);
+            DontDestroyOnLoad(newCutscene.gameObject);
 
             newCutscene.OnCutsceneFinished += () =>
             {
