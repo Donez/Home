@@ -10,33 +10,52 @@ public class LevelManager : MonoBehaviour
     public int level2Progress = 0;
     public int level3Progress = 0;
 
-    public Collider2D door2;
-    public Collider2D door3;
+    public Collider2D wall0;
+    public Collider2D wall1;
+
+    public DoorController door1Controller;
+    public DoorController door2Controller;
+    public DoorController door3Controller;
 
     //Start is called before the first frame update
     void Start()
     {
-        door2.enabled = true;
-        door3.enabled = true;
+        if(wall0)
+        {
+            wall0.enabled = true;
+            wall1.enabled = true;
+        }
+        
+        InitializeScene();
 
         SceneManager.activeSceneChanged += (Scene old, Scene newScene) =>
         {
-            door2 = GameObject.Find("Wall0")?.GetComponent<Collider2D>();
-            door3 = GameObject.Find("Wall1")?.GetComponent<Collider2D>();
+            // this will be executed in future scene changes
+            InitializeScene();
         };
     }
 
-    //Update is called once per frame
-    void Update()
+    public void InitializeScene()
     {
-        if(level1Progress > 0)
+        wall0 = GameObject.Find("Wall0")?.GetComponent<Collider2D>();
+        wall1 = GameObject.Find("Wall1")?.GetComponent<Collider2D>();
+
+        door1Controller = GameObject.Find("Door1")?.GetComponent<DoorController>();
+        door2Controller = GameObject.Find("Door2")?.GetComponent<DoorController>();
+        door3Controller = GameObject.Find("Door3")?.GetComponent<DoorController>();
+
+        door1Controller?.SetDoorState(level1Progress > 0 ? DoorState.GreenClosed : DoorState.RedClosed);
+        door2Controller?.SetDoorState(level2Progress > 0 ? DoorState.GreenClosed : DoorState.RedClosed);
+        door3Controller?.SetDoorState(level3Progress > 0 ? DoorState.GreenClosed : DoorState.RedClosed);
+
+        if (level1Progress > 0)
         {
-            door2.enabled = false;
+            wall0.enabled = false;
         }
 
-        if(level2Progress > 0)
+        if (level2Progress > 0)
         {
-            door3.enabled = false;
+            wall1.enabled = false;
         }
     }
 
