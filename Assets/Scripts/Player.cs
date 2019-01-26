@@ -44,6 +44,9 @@ namespace Assets.Scripts
 
         void FixedUpdate()
         {
+            if (Game.WorkingOnPuzzle)
+                return;
+
             if (m_jump)
             {
                 if (IsGrounded())

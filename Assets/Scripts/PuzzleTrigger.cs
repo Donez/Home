@@ -20,12 +20,10 @@ namespace Assets.Scripts
             {
                 m_puzzleInstance = GameObject.Instantiate(PuzzlePrefab, Vector3.zero, PuzzlePrefab.transform.rotation);
                 m_puzzleInstance.OnPuzzleCompleted += OnPuzzleCompleted;
-            }
-        }
 
-        void OnTriggerExit2D(Collider2D col)
-        {
-            DestroyPuzzle();
+                Game.WorkingOnPuzzle = true;
+                gameObject.SetActive(false);
+            }
         }
 
         void OnPuzzleCompleted()

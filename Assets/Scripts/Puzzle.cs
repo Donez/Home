@@ -8,6 +8,7 @@ namespace Assets.Scripts
 
         protected void OnPuzzleComplete()
         {
+            Game.WorkingOnPuzzle = false;
             OnPuzzleCompleted?.Invoke();
         }
 
