@@ -7,6 +7,7 @@ namespace Assets.Scripts
     {
         private float m_targetCameraSize;
         private bool m_cameraFullZoom;
+        private float m_runtime;
 
         private void Start()
         {
@@ -15,16 +16,18 @@ namespace Assets.Scripts
             StoryTeller.DisplayText(
                 new StoryText(
                     text: "I found everything",
-                    stopTime: true));
+                    stopTime: true,
+                    preDelaySeconds: 0.5f));
 
             StoryTeller.DisplayText(
                 new StoryText(
-                    text: "To repair my friend, because..",
-                    stopTime: true));
+                    text: "To repair my friend",
+                    stopTime: true,
+                    preDelaySeconds: 0.5f));
 
             StoryTeller.DisplayText(
                 new StoryText(
-                    text: "Home is where my loved ones are",
+                    text: "Because home is where my loved ones are",
                     stopTime: true,
                     preDelaySeconds: 1.0f));
         }
@@ -36,7 +39,7 @@ namespace Assets.Scripts
                 return;
             }
 
-            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, m_targetCameraSize, Time.deltaTime);
+            Camera.main.orthographicSize = Mathf.LerpUnclamped(Camera.main.orthographicSize, m_targetCameraSize, Time.deltaTime * 0.1f);
         }
 
         private void OnFullZoom()
