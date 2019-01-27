@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Door
+  - Vine
+  - Branch
+  - Clingy
+  - DragAwayFrom
+  - PlayerSpawn
   layers:
   - Default
   - TransparentFX
@@ -13,11 +19,11 @@ TagManager:
   - UI
   - 
   - 
+  - Ground
+  - DragAwayFrom
   - 
   - 
-  - 
-  - 
-  - 
+  - Puzzle
   - 
   - 
   - 
@@ -38,6 +44,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3649121855
+    locked: 0
+  - name: DustParticles
+    uniqueID: 1720358775
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 622782505
+    locked: 0
+  - name: Foreground
+    uniqueID: 3817206193
+    locked: 0
+  - name: Puzzle
+    uniqueID: 630485077
     locked: 0
