@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
@@ -53,8 +54,19 @@ namespace Assets.Scripts
                 Camera.main.orthographicSize = 10.0f;
             }
 
+            GameObject spawnOverride = null;
+
+            if (isMainHub)
+            {
+                var spawns = GameObject.FindGameObjectsWithTag("PlayerSpawn").OrderBy(s => s.name).ToArray();
+                if (LevelManager.previousLevel < spawns.Length)
+                {
+                    spawnOverride = spawns[LevelManager.previousLevel];
+                }
+            }
+            
             if(!isMainMenu)
-                m_player.GetComponent<Player>().ResetPosition();
+                m_player.GetComponent<Player>().ResetPosition(spawnOverride);
         }
         public static bool WorkingOnPuzzle = false;
 

@@ -42,9 +42,12 @@ namespace Assets.Scripts
             m_jump = false;
         }
 
-        public void ResetPosition()
+        public void ResetPosition(GameObject spawn = null)
         {
-            var spawn = GameObject.FindGameObjectWithTag("PlayerSpawn");
+            if (spawn == null)
+            {
+                spawn = GameObject.FindGameObjectWithTag("PlayerSpawn");
+            }
 
             if (spawn == null)
             {
