@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8248034330576135524
+--- !u!1 &2488344599583610558
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5025584276933337559}
-  - component: {fileID: 6268961512389178474}
+  - component: {fileID: 1802377169802479233}
+  - component: {fileID: 7832303600733720878}
   m_Layer: 0
-  m_Name: StoryPartThree
+  m_Name: StoryPartThreeCutscene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5025584276933337559
+--- !u!4 &1802377169802479233
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8248034330576135524}
+  m_GameObject: {fileID: 2488344599583610558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.99, y: 0.25, z: -0.20254429}
+  m_LocalPosition: {x: 1.452243, y: -0.07786194, z: -0.203125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6268961512389178474
+--- !u!114 &7832303600733720878
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8248034330576135524}
+  m_GameObject: {fileID: 2488344599583610558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 929844e11a8984943b85dd4bbdff5d33, type: 3}
+  m_Script: {fileID: 11500000, guid: c99d087f7bb37974ab20123eb0963c74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cutscene: {fileID: 7832303600733720878, guid: a6eb83f1b2dbf964a97ae634a0f3993a,
-    type: 3}

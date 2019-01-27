@@ -5890,6 +5890,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfdebe8274ec5364e8a8ddda084e7231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StoryPartOne: {fileID: 7764483860982762878, guid: b85584eb562ffdd4ca906a4b6ca3e1ec,
+    type: 3}
+  StoryPartTwo: {fileID: 1893501492984002775, guid: 31b947cc85f4e074ea0e921589c429b2,
+    type: 3}
+  StoryPartThree: {fileID: 8248034330576135524, guid: bc420bce0950e954a8e17fbf224fe38d,
+    type: 3}
+  StoryPartLevelTwo: {fileID: 1284201942094843016, guid: aa9ee3193b9507d418824fe481fed653,
+    type: 3}
+  StoryPartLevelThree: {fileID: 9221917454723414777, guid: fdf44227dd9645b41812f2bd333b97fe,
+    type: 3}
 --- !u!114 &6783114024574444240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6020,36 +6030,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: wall0
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: wall1
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: door1Controller
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: door2Controller
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 370373223938094773, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: door3Controller
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 370373223938094778, guid: a50fef75a742db64da1eef65c62da6dd,
-        type: 3}
-      propertyPath: MaxChargedJump
-      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 370373223938094778, guid: a50fef75a742db64da1eef65c62da6dd,
         type: 3}

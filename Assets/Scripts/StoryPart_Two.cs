@@ -2,16 +2,6 @@
 
 namespace Assets.Scripts
 {
-    public class StoryPart_Three : MonoBehaviour
-    {
-        public Cutscene Cutscene;
-
-        private void Start()
-        {
-            Game.PlayCutscene(Cutscene);
-        }
-    }
-    
     public class StoryPart_Two : MonoBehaviour
     {
         void Start()

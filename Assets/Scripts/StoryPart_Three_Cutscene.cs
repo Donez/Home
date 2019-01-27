@@ -11,7 +11,7 @@ namespace Assets.Scripts
 
         private void Start()
         {
-            m_targetCameraSize = Camera.main.orthographicSize * 4;
+            m_targetCameraSize = Camera.main.orthographicSize * 2;
 
             StoryTeller.DisplayText(
                 new StoryText(

@@ -46,9 +46,9 @@ namespace Assets.Scripts
             bool isLevel3 = scene.name == "Level3";
             bool isLastScene = scene.name == "LastScene";
 
-            m_player.gameObject.SetActive(!isMainMenu);
+            m_player.gameObject.SetActive(!isMainMenu || isLastScene);
 
-            if (isMainHub)
+            if (isMainHub || isLastScene)
             {
                 Camera.main.transform.localPosition = new Vector3(0, 2.5f, -10.0f);
                 Camera.main.orthographicSize = 4.7f;
@@ -103,7 +103,7 @@ namespace Assets.Scripts
                 GameObject.Instantiate(StoryPartThree, Vector3.zero, Quaternion.identity);
             }
 
-            if(!isMainMenu)
+            if(!isMainMenu && !isLastScene)
                 m_player.GetComponent<Player>().ResetPosition(spawnOverride);
         }
         public static bool WorkingOnPuzzle = false;

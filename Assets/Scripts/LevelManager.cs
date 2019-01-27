@@ -107,7 +107,7 @@ public class LevelManager : MonoBehaviour
         {
             level3Progress++;
             previousLevel = 3;
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(6);
             Debug.Log("Level 3 compleated");
         }
     }
