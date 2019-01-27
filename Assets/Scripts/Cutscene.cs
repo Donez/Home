@@ -9,6 +9,7 @@ namespace Assets.Scripts
 
         void OnDestroy()
         {
+            Game.IsPlayingCutscene = false;
             OnCutsceneFinished?.Invoke();
         }
     }

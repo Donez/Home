@@ -29,7 +29,7 @@ namespace Assets.Scripts
                 new StoryText(
                     text: "Home is friends and loved ones",
                     stopTime: true,
-                    preDelaySeconds: 1.0f));
+                    preDelaySeconds: 3.0f));
         }
 
         private void Update()
