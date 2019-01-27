@@ -50,12 +50,14 @@ public class LevelManager : MonoBehaviour
 
         if (level1Progress > 0)
         {
-            wall0.enabled = false;
+            if(wall0)
+                wall0.enabled = false;
         }
 
         if (level2Progress > 0)
         {
-            wall1.enabled = false;
+            if(wall1)
+                wall1.enabled = false;
         }
     }
 
