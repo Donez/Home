@@ -76,6 +76,18 @@ public class UIcontroller : MonoBehaviour
     //Change level on button press
     public void ResetlevelButton()
     {
+        ContinueButton.enabled = false;
+        ContinueImage.enabled = false;
+        ContinueText.enabled = false;
+
+        ResetButton.enabled = false;
+        ResetImage.enabled = false;
+        ResetText.enabled = false;
+
+        ReturnMenuButton.enabled = false;
+        ReturnMenuImage.enabled = false;
+        ReturnMenuText.enabled = false;
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
         Debug.Log("Level reset");
     }

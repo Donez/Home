@@ -85,32 +85,23 @@ public class LevelManager : MonoBehaviour
 
         if (collision.gameObject.name == "VictoryPoint1")
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
                 level1Progress++;
                 SceneManager.LoadScene(2);
                 Debug.Log("Level 1 compleated");
-            }
         }
 
         if (collision.gameObject.name == "VictoryPoint2")
         {
-            if(Input.GetKeyDown(KeyCode.E))
-            {
                 level2Progress++;
                 SceneManager.LoadScene(2);
-                Debug.Log("Level 2 compleated");
-            }
+                Debug.Log("Level 2 compleated");           
         }
 
         if(collision.gameObject.name == "VictoryPoint3")
         {
-            if(Input.GetKeyDown(KeyCode.E))
-            {
                 level3Progress++;
                 SceneManager.LoadScene(2);
                 Debug.Log("Level 3 compleated");
-            }
         }
     }
 
@@ -128,6 +119,14 @@ public class LevelManager : MonoBehaviour
         else if (collision.gameObject.name == "Door3")
         {
             Debug.Log("LoadLevel3Button disabled");
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.name == "DeathBar")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 - 1);
         }
     }
 }
