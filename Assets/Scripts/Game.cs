@@ -21,19 +21,36 @@ namespace Assets.Scripts
 
             m_player = GameObject.FindGameObjectWithTag("Player");
 
+            InitScene();
+
             SceneManager.activeSceneChanged += (Scene old, Scene newScene) =>
             {
-                bool isMainMenu = newScene.name == "MainMenu";
-
-                m_player.gameObject.SetActive(!isMainMenu);
-
-                if (!isMainMenu)
-                {
-                    m_player.GetComponent<Player>().ResetPosition();
-                }
+                InitScene();
             };
         }
 
+        private void InitScene()
+        {
+            var scene = SceneManager.GetActiveScene();
+            bool isMainMenu = scene.name == "MainMenu";
+            bool isMainHub = scene.name == "MainHub";
+
+            m_player.gameObject.SetActive(!isMainMenu);
+
+            if (isMainHub)
+            {
+                Camera.main.transform.localPosition = new Vector3(0, 2.5f, -10.0f);
+                Camera.main.orthographicSize = 4.7f;
+            }
+            else
+            {
+                Camera.main.transform.localPosition = new Vector3(0, 0.0f, -10.0f);
+                Camera.main.orthographicSize = 10.0f;
+            }
+
+            if(!isMainMenu)
+                m_player.GetComponent<Player>().ResetPosition();
+        }
         public static bool WorkingOnPuzzle = false;
 
         public static bool IsPlayingCutscene
