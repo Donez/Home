@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    public int level1Progress = 0;
-    public int level2Progress = 0;
-    public int level3Progress = 0;
+    public static int level1Progress = 0;
+    public static int level2Progress = 0;
+    public static int level3Progress = 0;
 
     public static int previousLevel = 0;
 

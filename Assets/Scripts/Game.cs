@@ -9,6 +9,12 @@ namespace Assets.Scripts
         private static Game Instance;
         private GameObject m_player;
 
+        public GameObject StoryPartOne;
+        public GameObject StoryPartTwo;
+        public GameObject StoryPartThree;
+        public GameObject StoryPartLevelTwo;
+        public GameObject StoryPartLevelThree;
+
         private void Awake()
         {
             if (Instance != null)
@@ -35,6 +41,10 @@ namespace Assets.Scripts
             var scene = SceneManager.GetActiveScene();
             bool isMainMenu = scene.name == "MainMenu";
             bool isMainHub = scene.name == "MainHub";
+            bool isLevel1 = scene.name == "Level1";
+            bool isLevel2 = scene.name == "Level2";
+            bool isLevel3 = scene.name == "Level3";
+            bool isLastScene = scene.name == "LastScene";
 
             m_player.gameObject.SetActive(!isMainMenu);
 
@@ -63,8 +73,36 @@ namespace Assets.Scripts
                 {
                     spawnOverride = spawns[LevelManager.previousLevel];
                 }
+
+                if (LevelManager.level1Progress == 0)
+                {
+                    // play story part 1
+                    GameObject.Instantiate(StoryPartOne, Vector3.zero, Quaternion.identity);
+                }
             }
-            
+
+            if (isLevel1 && LevelManager.level1Progress == 0)
+            {
+                // play story part 2
+                GameObject.Instantiate(StoryPartTwo, Vector3.zero, Quaternion.identity);
+            }
+
+            if(isLevel2 && LevelManager.level2Progress == 0)
+            {
+                // play story part level 2
+                GameObject.Instantiate(StoryPartLevelTwo, Vector3.zero, Quaternion.identity);
+            }
+
+            if (isLevel3 && LevelManager.level3Progress == 0)
+            {
+                GameObject.Instantiate(StoryPartLevelThree, Vector3.zero, Quaternion.identity);
+            }
+
+            if (isLastScene)
+            {
+                GameObject.Instantiate(StoryPartThree, Vector3.zero, Quaternion.identity);
+            }
+
             if(!isMainMenu)
                 m_player.GetComponent<Player>().ResetPosition(spawnOverride);
         }
