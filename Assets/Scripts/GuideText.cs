@@ -23,6 +23,15 @@ public class GuideText : MonoBehaviour
     {
         if (Physics.autoSimulation)
         {
+            var originalWidth = 1980.0f; 
+            var originalHeight = 820.0f;
+
+            var scale = Vector3.zero;
+            scale.x = Screen.width / originalWidth;
+            scale.y = Screen.height / originalHeight;
+            scale.z = 1;
+            GUI.matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.identity, scale);
+
             GUI.Label(new Rect(10, 10, 200, 400), text, guiStyle);
         }
     }
