@@ -25,6 +25,7 @@ namespace Assets.Scripts
         private SpriteRenderer m_spriteRenderer;
         private Animator m_animator;
         private Transform m_dustRoot;
+        private ParticleSystem m_dustParticles;
 
         private Vector3 m_dustRight, m_dustLeft;
 
@@ -36,6 +37,7 @@ namespace Assets.Scripts
             m_spriteRenderer = GetComponent<SpriteRenderer>();
             m_animator = GetComponent<Animator>();
             m_dustRoot = m_transform.Find("DustRoot");
+            m_dustParticles = m_dustRoot.GetComponentInChildren<ParticleSystem>();
 
             m_jump = false;
         }
@@ -75,8 +77,16 @@ namespace Assets.Scripts
                 m_horizontalInput = 0;
             }
 
-            m_dustRoot.gameObject.SetActive(Mathf.Abs(m_horizontalInput) > 0.0f && grounded);
-            m_dustRoot.transform.localScale = new Vector3(m_horizontalInput > 0 ? 1 : -1, 1, 1);
+            if(Mathf.Abs(m_horizontalInput) > 0.0f && grounded && m_dustParticles.isStopped)
+                m_dustParticles.Play();
+            else if(m_dustParticles.isPlaying)
+                m_dustParticles.Stop();
+
+            var dustScale = new Vector3(m_horizontalInput > 0 ? 1 : -1, 1, 1);
+            if (m_dustRoot.transform.localScale != dustScale)
+            {
+                m_dustRoot.transform.localScale = dustScale;
+            }
         }
 
         void FixedUpdate()

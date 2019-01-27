@@ -42,6 +42,11 @@ namespace Assets.Scripts
                 Camera.main.transform.localPosition = new Vector3(0, 2.5f, -10.0f);
                 Camera.main.orthographicSize = 4.7f;
             }
+            else if (isMainMenu)
+            {
+                Camera.main.transform.localPosition = new Vector3(0, 0.0f, -10.0f);
+                Camera.main.orthographicSize = 5.0f;
+            }
             else
             {
                 Camera.main.transform.localPosition = new Vector3(0, 0.0f, -10.0f);
