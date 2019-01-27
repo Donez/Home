@@ -60,6 +60,16 @@ namespace Assets.Scripts
 
         void Update()
         {
+            if (Physics.autoSimulation == false)
+            {
+                m_jump = false;
+
+                if(m_dustParticles.isPlaying)
+                    m_dustParticles.Stop();
+
+                return;
+            }
+
             var oldChargingValue = m_chargingJump;
             m_chargingJump = Input.GetButton("ChargeJump");
 

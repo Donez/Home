@@ -28,8 +28,6 @@ namespace Assets.Scripts
 
             m_player = GameObject.FindGameObjectWithTag("Player");
 
-            InitScene();
-
             SceneManager.activeSceneChanged += (Scene old, Scene newScene) =>
             {
                 InitScene();

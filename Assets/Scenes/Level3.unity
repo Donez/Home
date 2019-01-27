@@ -1179,6 +1179,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbd9df52c4591e44cb7d83b6ba48cb19, type: 3}
+--- !u!1001 &570732006
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 978452334061160804, guid: ce61ad45602a89a4eaf28e4ffa321bb6,
+        type: 3}
+      propertyPath: m_Name
+      value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 978452334061160806, guid: ce61ad45602a89a4eaf28e4ffa321bb6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 978452334061160806, guid: ce61ad45602a89a4eaf28e4ffa321bb6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 978452334061160806, guid: ce61ad45602a89a4eaf28e4ffa321bb6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 978452334061160806, guid: ce61ad45602a89a4eaf28e4ffa321bb6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 978452334061160806, guid: ce61ad45602a89a4eaf28e4ffa321bb6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 978452334061160806, guid: ce61ad45602a89a4eaf28e4ffa321bb6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 978452334061160806, guid: ce61ad45602a89a4eaf28e4ffa321bb6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 978452334061160806, guid: ce61ad45602a89a4eaf28e4ffa321bb6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 978452334061160806, guid: ce61ad45602a89a4eaf28e4ffa321bb6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 978452334061160806, guid: ce61ad45602a89a4eaf28e4ffa321bb6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 978452334061160806, guid: ce61ad45602a89a4eaf28e4ffa321bb6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ce61ad45602a89a4eaf28e4ffa321bb6, type: 3}
 --- !u!1001 &621960216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10028,8 +10097,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754939620}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 168.8, y: 135.53796, z: 1.2489147}
-  m_LocalScale: {x: 3.7100067, y: 4.9178243, z: 4.9178243}
+  m_LocalPosition: {x: 172.8, y: 132.9, z: 1.2489147}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 2070085153}
   m_RootOrder: 0
@@ -10812,7 +10881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deactivatedButton: {fileID: 21300000, guid: 56d3960a2ecb54d458c54376724b4b18, type: 3}
   activatedButton: {fileID: 21300000, guid: 698791d571634114b944becfa676ac87, type: 3}
-  requiredMass: 1
+  requiredMass: 2
   closedDoor: {fileID: 21300000, guid: 6539553b8843cff4d8fe04a11511a5f5, type: 3}
   openedDoor: {fileID: 21300000, guid: 0326cffa5e43780409e3e302dae15fea, type: 3}
   door: {fileID: 1754939620}
@@ -10831,7 +10900,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.67426825}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10842,7 +10911,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3816988, y: 1.2379045}
+  m_Size: {x: 8.18, y: 4.57}
   m_EdgeRadius: 0
 --- !u!212 &2070085152
 SpriteRenderer:
@@ -11125,7 +11194,7 @@ PrefabInstance:
     - target: {fileID: 5193178273130332546, guid: 4da4918a6dc3397409fb8d95f8848d7e,
         type: 3}
       propertyPath: m_Name
-      value: VictoryPoint2
+      value: VictoryPoint3
       objectReference: {fileID: 0}
     - target: {fileID: 5193178273130332556, guid: 4da4918a6dc3397409fb8d95f8848d7e,
         type: 3}
