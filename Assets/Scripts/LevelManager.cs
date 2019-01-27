@@ -10,6 +10,8 @@ public class LevelManager : MonoBehaviour
     public int level2Progress = 0;
     public int level3Progress = 0;
 
+    public static int previousLevel = 0;
+
     public Collider2D wall0;
     public Collider2D wall1;
 
@@ -25,7 +27,7 @@ public class LevelManager : MonoBehaviour
             wall0.enabled = true;
             wall1.enabled = true;
         }
-        
+
         InitializeScene();
 
         SceneManager.activeSceneChanged += (Scene old, Scene newScene) =>
@@ -48,13 +50,13 @@ public class LevelManager : MonoBehaviour
         door2Controller?.SetDoorState(level2Progress > 0 ? DoorState.GreenClosed : DoorState.RedClosed);
         door3Controller?.SetDoorState(level3Progress > 0 ? DoorState.GreenClosed : DoorState.RedClosed);
 
-        if (level1Progress > 0)
+        if(level1Progress > 0)
         {
             if(wall0)
                 wall0.enabled = false;
         }
 
-        if (level2Progress > 0)
+        if(level2Progress > 0)
         {
             if(wall1)
                 wall1.enabled = false;
@@ -63,21 +65,21 @@ public class LevelManager : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Door1")
+        if(collision.gameObject.name == "Door1")
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
                 SceneManager.LoadScene(3);
             }
         }
-        else if (collision.gameObject.name == "Door2")
+        else if(collision.gameObject.name == "Door2")
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if(Input.GetKeyDown(KeyCode.E))
             {
                 SceneManager.LoadScene(4);
             }
         }
-        else if (collision.gameObject.name == "Door3")
+        else if(collision.gameObject.name == "Door3")
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
@@ -85,25 +87,28 @@ public class LevelManager : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.name == "VictoryPoint1")
+        if(collision.gameObject.name == "VictoryPoint1")
         {
-                level1Progress++;
-                SceneManager.LoadScene(2);
-                Debug.Log("Level 1 compleated");
+            level1Progress++;
+            previousLevel = 1;
+            SceneManager.LoadScene(2);
+            Debug.Log("Level 1 compleated");
         }
 
-        if (collision.gameObject.name == "VictoryPoint2")
+        if(collision.gameObject.name == "VictoryPoint2")
         {
-                level2Progress++;
-                SceneManager.LoadScene(2);
-                Debug.Log("Level 2 compleated");           
+            level2Progress++;
+            previousLevel = 2;
+            SceneManager.LoadScene(2);
+            Debug.Log("Level 2 compleated");
         }
 
         if(collision.gameObject.name == "VictoryPoint3")
         {
-                level3Progress++;
-                SceneManager.LoadScene(2);
-                Debug.Log("Level 3 compleated");
+            level3Progress++;
+            previousLevel = 3;
+            SceneManager.LoadScene(2);
+            Debug.Log("Level 3 compleated");
         }
     }
 
@@ -114,11 +119,11 @@ public class LevelManager : MonoBehaviour
         {
             Debug.Log("LoadLevel1Button disabled");
         }
-        else if (collision.gameObject.name == "Door2")
+        else if(collision.gameObject.name == "Door2")
         {
             Debug.Log("LoadLevel2Button disabled");
         }
-        else if (collision.gameObject.name == "Door3")
+        else if(collision.gameObject.name == "Door3")
         {
             Debug.Log("LoadLevel3Button disabled");
         }

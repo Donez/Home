@@ -36,8 +36,6 @@ public class Background : MonoBehaviour
         Background1.material.SetTextureOffset("_MainTex", -distance * 0.5f * Speed);
         Background2.material.SetTextureOffset("_MainTex", -distance * 0.75f * Speed);
         Background3.material.SetTextureOffset("_MainTex", -distance * Speed);
-
-        Debug.Log(distance);
     }
 
     private Vector2 PlayerDistanceFromSpawn()
