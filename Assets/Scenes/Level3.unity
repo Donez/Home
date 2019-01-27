@@ -442,8 +442,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141964923}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071066, w: 0.707107}
-  m_LocalPosition: {x: -23.97, y: 3.68, z: -0.0010327548}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -100.383064, y: 17.858318, z: -0.0051957807}
+  m_LocalScale: {x: 4.1487713, y: 4.1487713, z: 4.1487713}
   m_Children: []
   m_Father: {fileID: 412171614}
   m_RootOrder: 0
@@ -901,8 +901,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb515d16b7ff00b43a8abd1b48629709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deactivatedButton: {fileID: 21300000, guid: 02b50167519950541a7123706a60ab88, type: 3}
-  activatedButton: {fileID: 21300000, guid: 0724cb6b822eea649acfbf941a0a3ac3, type: 3}
+  deactivatedButton: {fileID: 21300000, guid: 56d3960a2ecb54d458c54376724b4b18, type: 3}
+  activatedButton: {fileID: 21300000, guid: 698791d571634114b944becfa676ac87, type: 3}
   requiredMass: 1
   closedDoor: {fileID: 21300000, guid: 2038d2a8643fc4341b2421a4501a9000, type: 3}
   openedDoor: {fileID: 21300000, guid: 8064f616d5fb87b418f85a7e69059490, type: 3}
@@ -926,7 +926,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
+    oldSize: {x: 8.18, y: 4.57}
     newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -972,7 +972,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 02b50167519950541a7123706a60ab88, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56d3960a2ecb54d458c54376724b4b18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -991,8 +991,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412171610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.063, y: 11.477, z: -0.054211}
-  m_LocalScale: {x: 0.96079326, y: 0.96079326, z: 0.96079326}
+  m_LocalPosition: {x: 27.28, y: 10.877, z: -0.054}
+  m_LocalScale: {x: 0.23158503, y: 0.23158503, z: 0.23158503}
   m_Children:
   - {fileID: 141964926}
   m_Father: {fileID: 0}
