@@ -39,12 +39,12 @@ public class DoorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void SetDoorState(DoorState state)
     {
-        switch (state)
+        switch(state)
         {
             case DoorState.RedClosed:
                 spr.sprite = redClosed;
@@ -69,7 +69,7 @@ public class DoorController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if(collision.gameObject.name == "Player")
         {
             if(spr.sprite == greenClosed)
             {
@@ -88,12 +88,12 @@ public class DoorController : MonoBehaviour
     {
         if(colliosion.gameObject.name == "Player")
         {
-            if (spr.sprite == greenOpen)
+            if(spr.sprite == greenOpen)
             {
                 spr.sprite = greenClosed;
             }
 
-            if (spr.sprite == redOpen)
+            if(spr.sprite == redOpen)
             {
                 spr.sprite = redClosed;
             }
