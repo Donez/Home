@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4123684158080313899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.71, y: -5.39, z: -0.054}
-  m_LocalScale: {x: 0.22747359, y: 0.22747359, z: 0.22747359}
+  m_LocalScale: {x: 0.2320458, y: 0.2320458, z: 0.2320458}
   m_Children:
   - {fileID: 4123684158405924048}
   m_Father: {fileID: 0}
@@ -92,10 +92,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.67426825}
+  m_Offset: {x: 0, y: -0.16868764}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -106,7 +106,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3816988, y: 1.2379045}
+  m_Size: {x: 6.583637, y: 4.2326245}
   m_EdgeRadius: 0
 --- !u!114 &4123684158080313896
 MonoBehaviour:
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deactivatedButton: {fileID: 21300000, guid: 56d3960a2ecb54d458c54376724b4b18, type: 3}
   activatedButton: {fileID: 21300000, guid: 698791d571634114b944becfa676ac87, type: 3}
-  requiredMass: 2
+  requiredMass: 3
   closedDoor: {fileID: 21300000, guid: 2038d2a8643fc4341b2421a4501a9000, type: 3}
   openedDoor: {fileID: 21300000, guid: 8064f616d5fb87b418f85a7e69059490, type: 3}
   door: {fileID: 4123684158405924050}
@@ -154,8 +154,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4123684158405924050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.07444, y: 39.175938, z: -0.0052896915}
-  m_LocalScale: {x: 4.2237573, y: 4.2237573, z: 4.2237573}
+  m_LocalPosition: {x: -51.14, y: 19.82, z: -0.0052896915}
+  m_LocalScale: {x: -4.223757, y: 4.2237573, z: 4.2237573}
   m_Children: []
   m_Father: {fileID: 4123684158080313879}
   m_RootOrder: 0
@@ -197,7 +197,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2038d2a8643fc4341b2421a4501a9000, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6539553b8843cff4d8fe04a11511a5f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -221,16 +221,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -2.0160747, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 5}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 2.56, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.31921998, y: 5}
+  m_Size: {x: 0.71823716, y: 5.12}
   m_EdgeRadius: 0
