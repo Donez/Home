@@ -16,7 +16,7 @@ public class GuideText : MonoBehaviour
         text = "Interact: 'E'\n" +
                "Move: 'A' and 'D'\n" +
                "Jump: 'Space'\n" +
-               "Charge Jump: Hold 'S'";
+               "Super Jump: Hold 'S'";
     }
 
     void OnGUI()
