@@ -27,8 +27,13 @@ namespace Assets.Scripts
 
                 m_player.gameObject.SetActive(!isMainMenu);
 
-                if (!isMainMenu)
+                if (isMainMenu)
                 {
+                    Camera.main.orthographicSize = 4.7f;
+                }
+                else
+                {
+                    Camera.main.orthographicSize = 10.0f;
                     m_player.GetComponent<Player>().ResetPosition();
                 }
             };
