@@ -2,16 +2,18 @@
 
 public class Background : MonoBehaviour
 {
-    public SpriteRenderer Background1;
-    public SpriteRenderer Background2;
+    public Renderer Background1;
+    public Renderer Background2;
+    public Renderer Background3;
+    public Vector2 Offset = new Vector2(13, 0);
+
+    public float Speed = 0.001f;
 
     private Transform m_transform;
     private Transform m_cameraTransform;
 
     private Transform m_playerSpawn;
     private Transform m_player;
-
-    private Material m_bg1mat, m_bg2mat;
 
     void Start()
     {
@@ -20,19 +22,22 @@ public class Background : MonoBehaviour
 
         m_playerSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
         m_player = GameObject.FindGameObjectWithTag("Player").transform;
-
-        m_bg1mat = Background1.material;
-        m_bg2mat = Background2.material;
     }
 
     private void Update()
     {
-        m_transform.position = m_cameraTransform.position;
+        var position = m_cameraTransform.position;
+        position.z = 1;
 
-        var distance = PlayerDistanceFromSpawn();
+        m_transform.position = position;
 
-        m_bg1mat.SetTextureOffset("_MainTex", distance * 0.9f);
-        m_bg2mat.SetTextureOffset("_MainTex", distance);
+        var distance = PlayerDistanceFromSpawn() + Offset;
+
+        Background1.material.SetTextureOffset("_MainTex", -distance * 0.5f * Speed);
+        Background2.material.SetTextureOffset("_MainTex", -distance * 0.75f * Speed);
+        Background3.material.SetTextureOffset("_MainTex", -distance * Speed);
+
+        Debug.Log(distance);
     }
 
     private Vector2 PlayerDistanceFromSpawn()
