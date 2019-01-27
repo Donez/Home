@@ -24,6 +24,9 @@ namespace Assets.Scripts
         private float m_horizontalInput;
         private SpriteRenderer m_spriteRenderer;
         private Animator m_animator;
+        private Transform m_dustRoot;
+
+        private Vector3 m_dustRight, m_dustLeft;
 
         void Awake()
         {
@@ -32,6 +35,8 @@ namespace Assets.Scripts
             m_rigidbody = GetComponent<Rigidbody2D>();
             m_spriteRenderer = GetComponent<SpriteRenderer>();
             m_animator = GetComponent<Animator>();
+            m_dustRoot = m_transform.Find("DustRoot");
+
             m_jump = false;
         }
 
@@ -69,6 +74,9 @@ namespace Assets.Scripts
             {
                 m_horizontalInput = 0;
             }
+
+            m_dustRoot.gameObject.SetActive(Mathf.Abs(m_horizontalInput) > 0.0f && grounded);
+            m_dustRoot.transform.localScale = new Vector3(m_horizontalInput > 0 ? 1 : -1, 1, 1);
         }
 
         void FixedUpdate()
