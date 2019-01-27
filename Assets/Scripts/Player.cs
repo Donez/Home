@@ -24,6 +24,10 @@ namespace Assets.Scripts
         private float m_horizontalInput;
         private SpriteRenderer m_spriteRenderer;
         private Animator m_animator;
+        private Transform m_dustRoot;
+        private ParticleSystem m_dustParticles;
+
+        private Vector3 m_dustRight, m_dustLeft;
 
         void Awake()
         {
@@ -32,6 +36,9 @@ namespace Assets.Scripts
             m_rigidbody = GetComponent<Rigidbody2D>();
             m_spriteRenderer = GetComponent<SpriteRenderer>();
             m_animator = GetComponent<Animator>();
+            m_dustRoot = m_transform.Find("DustRoot");
+            m_dustParticles = m_dustRoot.GetComponentInChildren<ParticleSystem>();
+
             m_jump = false;
         }
 
@@ -68,6 +75,17 @@ namespace Assets.Scripts
             if (m_chargingJump && grounded)
             {
                 m_horizontalInput = 0;
+            }
+
+            if(Mathf.Abs(m_horizontalInput) > 0.0f && grounded && m_dustParticles.isStopped)
+                m_dustParticles.Play();
+            else if(m_dustParticles.isPlaying)
+                m_dustParticles.Stop();
+
+            var dustScale = new Vector3(m_horizontalInput > 0 ? 1 : -1, 1, 1);
+            if (m_dustRoot.transform.localScale != dustScale)
+            {
+                m_dustRoot.transform.localScale = dustScale;
             }
         }
 
