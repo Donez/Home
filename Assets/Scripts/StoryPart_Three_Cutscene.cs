@@ -39,7 +39,10 @@ namespace Assets.Scripts
                 return;
             }
 
-            Camera.main.orthographicSize = Mathf.LerpUnclamped(Camera.main.orthographicSize, m_targetCameraSize, Time.deltaTime * 0.1f);
+            foreach (var camera in Camera.allCameras)
+            {
+                camera.orthographicSize = Mathf.LerpUnclamped(camera.orthographicSize, m_targetCameraSize, Time.deltaTime * 0.1f);
+            }
         }
 
         private void OnFullZoom()
